@@ -6,13 +6,17 @@
 # 
 # Setup ####
 library(tidyverse)
-source("~/Documents/R/helpers.R")
+library(haven)
+library(labelled)
+library(flextable)
+library(gtsummary)
+source("R/helpers.R")
 
-# Import ####
+# Import (not run) ####
 # Import the raw-data from Mission Australia, perform some preprocessing (e.g.,
-# select relevant columns), and then saves the result in 
-# data\ys_preprocessed.rds for further analysis below. 
-source("R/import.R")
+# select relevant columns), and then saves the result in data\ys_preprocessed.rds
+# for further analysis below. 
+# source("R/import.R") # requires raw-data (not provided)
 
 
 # Table 1. Demographics ####
