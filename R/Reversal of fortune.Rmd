@@ -18,10 +18,12 @@ library(tidyverse)
 library(gtsummary)
 library(flextable)
 library(labelled)
-source("~/Documents/R/helpers.R")
+source("helpers.R")
 
-
-theme_gtsummary_compact(set_theme = TRUE, font_size = 9)
+# Setting JAMA theme for gtsummary
+theme_gtsummary_journal("nejm")
+# Themes can be combined by including more than one
+theme_gtsummary_compact(set_theme = TRUE, font_size = 9.5)
 ```
 
 a.  ARC Centre of Excellence for Children and Families over the Life Course, Australia
@@ -129,7 +131,7 @@ Sampling weights inversely proportional to the selection probabilities of sample
 
 # Results  
 
-#### Table 1. Demographic characteristics before, during, and after the COVID-19 pandemic
+#### Table 1. Demographic characteristics^1^ before, during and after COVID era
 ```{r table_1, eval=T}
 source("table_1.R")
 
@@ -233,7 +235,7 @@ The authors declare they have no competing interests.
 
 **Data Availability**    
 
-All code used in the production of this manuscript is available at https://github.com/datarichard/reversal-of-fortunes. The deidentified Youth Survey data is available by request from Mission Australia.  
+All code used in the production of this manuscript is available at https://github.com/datarichard/Reversal-of-fortune. The deidentified Youth Survey data is available by request from Mission Australia.  
 
 
 \newpage 
