@@ -1,0 +1,255 @@
+---
+title: "Reversal of Fortune: Evidence of Improving Youth Mental Health Trends in Australia from 2022-2024"
+author: "Richard W. Morris^a,b^, Naheen Brennan^c^, Tamara Freeburn^c^, Nick Glozier^a,b,\\*^"  
+output: word_document
+bibliography: references.bib
+csl: vancouver.csl
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = FALSE,
+                      ft.align = "left",
+                      dpi = 300,
+                      warning = TRUE,
+                      fig.dim = c(6.42, 4.28), # 5.83, 3.89
+                      out.width = "110%") 
+
+library(tidyverse)
+library(gtsummary)
+library(flextable)
+library(labelled)
+source("~/Documents/R/helpers.R")
+
+
+theme_gtsummary_compact(set_theme = TRUE, font_size = 9)
+```
+
+a.  ARC Centre of Excellence for Children and Families over the Life Course, Australia
+b.  Central Clinical School, Faculty of Medicine and Health, University of Sydney, NSW, Australia
+c.  Mission Australia Pty Ltd, Australia  
+
+\ 
+
+*`r paste0('Date rendered: ', Sys.Date())`*  
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+*Corresponding author: Nicholas Glozier    
+
+**Email:**  nick.glozier@sydney.edu.au  
+
+<br><br>
+
+**Classification:** Population mental health.  
+
+**Keywords:** school, psychological distress, depression, anxiety, children.  
+
+\newpage
+
+# Abstract  
+
+**Background:**  
+
+**Aims:**  
+
+**Method:**  
+
+**Results:**  
+
+**Conclusions:**  
+
+
+
+\newpage
+
+# Background  
+
+After more than a decade of escalating concern about youth mental health, emerging evidence suggests a potential turning point may have been reached [@economist2025]. Recent data from the United States indicate that the prolonged deterioration in adolescent and young adult psychological wellbeing that characterised the 2010s appears to be reversing, with measurable improvements observed from 2022 onwards [@ethier2025; @hms2025]. We present parallel findings from Australia, utilising twelve years of Mission Australia Youth Survey data (2012-2024) to examine trends in psychological distress among Australian young people.  
+
+The global youth mental health crisis of the past decade has been well-documented, with numerous studies demonstrating rising rates of depression, anxiety, and suicidal ideation among adolescents and young adults across developed nations. In the United States, CDC data show reductions in persistent feelings of sadness or hopelessness among high school students from 42% in 2021 to 40% in 2023, with the largest reductions in female students [@ethier2025]. More recently, the Healthy Minds Study documented that depression symptoms among university students peaked at 44% in 2022, before declining to 41% in 2023 and 38% in 2024 [@hms2025]. Similarly, the 2024-2025 Healthy Minds Study reported that severe depression symptoms have dropped to 18% (down from 23% in 2022), whilst suicidal ideation has fallen to 11% (down from 15% in 2022).  
+
+In the Australian context, the trajectory of youth mental health has been a source of significant policy concern. The Productivity Commission's landmark 2020 Mental Health Inquiry highlighted the substantial economic and social costs of poor mental health, particularly among young people [@kavanagh2020]. However, monitoring progress has proven challenging. The Commission's 2025 interim Review of the National Mental Health and Suicide Prevention Agreement identified a critical data gap, noting that "there is no data available to describe trends in the mental health and suicide prevention system over the term of the Agreement. Most of the data was last collected in 2022" [@pc2025].  
+
+This data deficit is particularly problematic given the substantial investments in youth mental health services over recent years, including the expansion of headspace centres, implementation of school-based mental health programmes, and increased funding for early intervention services. Without reliable trend data, it has been impossible to assess whether these interventions are achieving their intended outcomes or whether the trajectory of youth mental health in Australia mirrors patterns observed internationally.  
+
+The Mission Australia Youth Survey represents one of the few consistent, annual data sources on youth wellbeing in Australia. Since 2012, the survey has included the Kessler Psychological Distress Scale (K6), a validated instrument for measuring psychological distress in population surveys. This provides a unique opportunity to examine trends in youth mental health over a twelve-year period, spanning both the documented deterioration of the 2010s and the potential recovery period from 2022 onwards.  
+
+Understanding whether Australia is experiencing a similar reversal in youth mental health trends to that observed in the United States has important implications for policy and practice. If confirmed, such findings would suggest that the factors driving improvement may transcend national boundaries and could inform targeted interventions. Conversely, divergent patterns would highlight the importance of country-specific factors and the need for tailored approaches.  
+
+Furthermore, documenting these trends addresses the data gap identified by the Productivity Commission and provides essential evidence for evaluating the effectiveness of Australia's substantial investments in youth mental health services. This analysis is particularly timely given ongoing debates about resource allocation, service models, and the balance between universal prevention and targeted intervention strategies.  
+
+\newpage
+
+# Method  
+
+<br>
+
+##### Mission Australia Youth Survey sampling and procedures  
+
+The _Youth Survey_ is a convenience sample of all young Australians aged 15 to 19. The sampling frame was young people enrolled at school or in contact with Mission Australia services. Respondents were enrolled by invitation to their school, as well as in contact with community organisations, local government services, Mission Australia services and the Mission Australia website.  
+
+<br>
+
+#####	K6 scale details and scoring  
+
+Since 2012, the Mission Australia Youth Survey has included a measure of psychological distress: the Kessler 6 (K6). It consists of a brief, six-item scale that asks respondents how frequently in the past four weeks they have felt the following symptoms: 1) nervous; 2) hopeless; 3) restless or fidgety; 4) so depressed that nothing could cheer them up; 5) that everything was an effort; and 6) worthless. Total scores range from 6 to 30.  
+
+Based on the established [Australian scoring criteria published by the Australian Bureua of Statistics (ABS)](https://www.abs.gov.au/ausstats/abs@.nsf/lookup/34333D54F054CE51CA2579D50015D786), we distinguished the number of young people with **psychological distress** as a validated indicator of the prevalence of likely mental illness in the population [@kessler2003; @kessler2010; @furukawa2003]. Consistent with the ABS, a total K6 score > 18 indicated psychological distress.  
+
+<br>
+
+
+#####	Sample sizes and demographics across years  
+
+The _Mission Australia Youth Survey_ is the largest annual survey of young people of its kind in Australia. In 2024, Mission Australia conducted its 23rd annual survey, receiving 17,480 responses from young people aged 15 to 19 years. The number of responses ($N$) received each year included in the present report were substantial, resulting in high levels of precision when estimating prevalence. For example, a 95 percent binomial confidence interval has less than 1 percentage point margin of error at the smallest annual survey sample (i.e., 0.84 of a percentage point when $N = 13,600$ in 2014). Thus confidence interval estimates were not displayed in the figures in this report.  
+
+
+<br>
+
+
+#####	Statistical approach to trend analysis  
+
+(to be added here)  
+
+<br>
+
+#####	Adjustments for demographic changes over time  
+
+Sampling weights inversely proportional to the selection probabilities of sample units in the Australian census population were calculated and provided by Mission Australia. The target population was all Australian young people aged 15 to 19 in each year. Inverse probabilitiy of sampling weighting (IPSW) was conducted for   gender, state and SEIFA index in each year. The weights were then included in the annual estimates reported here to adjust for sampling differences in each year.  
+
+<br>
+
+\newpage
+
+# Results  
+
+#### Table 1. Demographic characteristics before, during, and after the COVID-19 pandemic
+```{r table_1, eval=T}
+source("table_1.R")
+
+table_1
+```
+
+<br>
+
+We selected three years of survey results to compare the how the profile of young people have changed from pre-COVID to the post-COVID era. Table 1 shows the sample was majority female before, during and after the COVID era, with most respondents 15 or 16 years old. Likewise, most respondents came from the three largest states: NSW, QLD and VIC, however the relative size of the WA sample declined during and after COVID. The vast majority of respondents were at school (> 90%), however there was a small but increasing proportion of respondents not in education, employment or training (NEET).  
+
+<br>
+
+#### Figure 1. Annual trends in psychological distress from 2012 to 2024  
+```{r figure_1, fig.cap = "The prevalence of psychological distress increased in Australia from 2012 to 2022. This trend peaked in 2022 and has declined for two consecutive years."}
+source("figure_1.R")
+
+fig_1
+```
+
+<br>
+
+Australia, along with other parts of the developed world, experienced what some have called an epidemic of mental ill-health among young people for over a decade between 2012 and 2022 [@blanchflower2025; @twenge2025]. However the peak in psychological distress among young Australians in 2022 and subsequent decline in the post-COVID era is also consistent with emerging data from high schools and college campuses in the US [@ethier2025; @hms2025].  
+
+
+\newpage
+
+# Discussion  
+
+The findings presented here provide the first comprehensive evidence of youth mental health trends in Australia spanning the critical period from 2012 to 2024. Our results demonstrating improvement from 2022 onwards align with emerging patterns observed in the United States, suggesting parallel discussion points based on actual findings.  
+
+Several potential explanations warrant consideration for the observed reversal in youth mental health trends. First, the natural resolution of pandemic-related stressors may have contributed to improvements as young people adapted to post-COVID realities and social connections were re-established. Second, increased mental health literacy and reduced stigma may have facilitated earlier help-seeking and more effective self-management strategies. The proliferation of digital mental health resources and apps, whilst controversial, may have provided accessible support for mild to moderate symptoms.  
+
+From a developmental perspective, the cohort effects cannot be ignored. Young people who experienced the peak of social media expansion during early adolescence may have developed greater digital resilience and more sophisticated strategies for managing online environments. Additionally, growing awareness of the relationship between social media use and wellbeing may have prompted behavioural changes at both individual and family levels.  
+
+The Australian context offers unique insights into these trends. The expansion of youth mental health services through headspace and other initiatives may have reached a critical mass, enabling earlier intervention and preventing escalation of symptoms. School-based programmes focusing on resilience, emotional regulation, and help-seeking may be yielding dividends as these cohorts age. However, it is equally possible that improvements reflect broader societal changes, including evolving attitudes toward work-life balance, increased acceptance of diverse identities, and growing emphasis on wellbeing in educational settings.  
+
+<br>
+
+### Limitations  
+
+Several limitations should be acknowledged. The Mission Australia Youth Survey, whilst valuable for its consistency and scale, relies on self-report measures and may not capture the full spectrum of mental health presentations. Selection bias may influence results if survey participation patterns have changed over time. Additionally, the K6, whilst validated, provides a measure of general psychological distress rather than specific diagnostic categories. Caution is warranted in extrapolating these findings to clinical populations or assuming they reflect changes in severe mental illness rates.  
+
+<br>
+
+### Implications and Future Directions  
+
+These findings have substantial implications for mental health policy and service delivery in Australia. If the improving trend is sustained, it suggests that current approaches may be gaining traction, though continued vigilance is essential given the dynamic nature of youth mental health. The alignment with international trends points to the value of cross-national collaboration and knowledge exchange in addressing youth mental health challenges.  
+
+Future research should investigate the mechanisms underlying these improvements, with particular attention to identifying protective factors that can be enhanced through policy and practice. Longitudinal studies following individual trajectories would complement these population-level findings. Additionally, examining disparities in mental health trends across different subgroups—including Indigenous youth, rural and remote populations, and LGBTQIA+ young people—remains critical for ensuring equitable outcomes.  
+
+The data gap identified by the Productivity Commission underscores the need for sustained investment in mental health surveillance systems. Regular, comprehensive monitoring using consistent measures is essential for tracking progress, identifying emerging concerns, and evaluating intervention effectiveness. The establishment of a national youth mental health observatory, as recommended in various policy documents, would provide the infrastructure necessary for evidence-informed decision-making.  
+
+<br>
+
+### Conclusions  
+
+This analysis provides timely evidence of youth mental health trends in Australia during a period of significant change. The documented improvement from 2022 onwards offers cautious optimism whilst highlighting the importance of sustained attention to youth mental health. These findings address a critical evidence gap identified by the Productivity Commission and provide a foundation for informed policy development.  
+
+The apparent reversal of the decade-long deterioration in youth mental health, if sustained, represents a significant public health achievement. However, rates of psychological distress remain substantially elevated compared to historical baselines, indicating that considerable work remains. The challenge now is to consolidate gains, address persistent disparities, and build resilient systems capable of responding to future challenges.  
+
+As Australia continues to navigate the complex landscape of youth mental health, these data provide both reassurance and direction. They suggest that positive change is possible whilst reminding us that progress requires sustained commitment, evidence-informed approaches, and continued innovation in how we support the wellbeing of young people.  
+
+\newpage
+
+# Declarations  
+
+<br>
+
+**Ethics declaration**   
+
+This research uses deidentified data provided by Mission Australia and was conducted under approval by the Orygen Human Research Ethics Committee (HREC/2024-22721-52643-16)    
+
+<br>
+
+**Consent for Publication**  
+
+Written informed consent was obtained from all survey respondents before completing the first question, and from their parents or guardians in the case of school children. This confirms that any participant has consented to the inclusion of material pertaining to themselves, that they acknowledge that they cannot be identified via the manuscript; and that the participant has been fully anonymized by Mission Australia.     
+
+<br>
+
+**Author contributions**  
+
+to be completed  
+
+<br>
+
+
+**Funding**    
+
+This research was supported by the Australian Government through the Australian Research Council’s Centre of Excellence for Children and Families over the Life Course (Project ID CE200100025).  
+
+<br>
+
+
+**Declaration of Interest**    
+
+The authors declare they have no competing interests.  
+
+<br>
+
+
+**Data Availability**    
+
+All code used in the production of this manuscript is available at https://github.com/datarichard/reversal-of-fortunes. The deidentified Youth Survey data is available by request from Mission Australia.  
+
+
+\newpage 
+
+
+# References  
+
+
+
+
+
+
+
+
+
+
+
+
+
