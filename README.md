@@ -1,6 +1,6 @@
-# Reversal of Fortune: Evidence of Improving Youth Mental Health Trends in Australia from 2022-2024  
+# Green shoots: Evidence of Improving Youth Mental Health Trends in Australia from 2022-2024  
 
-Download repository and run `reversal of fortune.R` (run-file)  
+Download repository and run `green shoots.R` (run-file)  
 
 <br>
 
