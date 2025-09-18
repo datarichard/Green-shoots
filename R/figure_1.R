@@ -17,7 +17,8 @@ highlights <- k6_percents |>
     Year == first(Year) |m| Year == last(Year))
 
 
-fig_1 <- ggplot(k6_percents, aes(x = Year, y = proportion)) +
+fig_1 <- ggplot(k6_percents, 
+                aes(x = Year, y = proportion)) +
   geom_vline(aes(xintercept = 2011), alpha = 0) +
   # geom_vline(aes(xintercept = 2022), color = "grey80") +
   geom_hline(aes(yintercept = 0), alpha = 0) +

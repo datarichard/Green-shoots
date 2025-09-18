@@ -1,5 +1,5 @@
 ---
-title: "Reversal of Fortune: Evidence of Improving Youth Mental Health Trends in Australia from 2022-2024"
+title: "Green shoots - Has the decline in high school children mental health ceased?"
 author: "Richard W. Morris^a,b^, Naheen Brennan^c^, Tamara Freeburn^c^, Nick Glozier^a,b,\\*^"  
 output: word_document
 bibliography: references.bib
@@ -24,6 +24,20 @@ source("helpers.R")
 theme_gtsummary_journal("nejm")
 # Themes can be combined by including more than one
 theme_gtsummary_compact(set_theme = TRUE, font_size = 9.5)
+
+
+# Setting typography-centric theme for ggplot
+# default: margin(t = 30, r = 30, b = 30, l = 30)
+theme_set(
+  hrbrthemes::theme_ipsum(
+    plot_margin = margin(t = 10, r = 30, b = 0, l = 0),
+    # plot_margin = margin(t = 5, r = 10, b = 0, l = 0),
+    grid = "Y") + 
+    theme( 
+      axis.text.y = element_text(
+        margin = margin(r = -22), vjust = -0.5),
+      panel.spacing = unit(.5, "lines")
+    ))
 ```
 
 a.  ARC Centre of Excellence for Children and Families over the Life Course, Australia
@@ -154,6 +168,59 @@ fig_1
 <br>
 
 Australia, along with other parts of the developed world, experienced what some have called an epidemic of mental ill-health among young people for over a decade between 2012 and 2022 [@blanchflower2025; @twenge2025]. However the peak in psychological distress among young Australians in 2022 and subsequent decline in the post-COVID era is also consistent with emerging data from high schools and college campuses in the US [@ethier2025; @hms2025].  
+
+
+\newpage
+
+#### Figure 2 Trend in severity of symptoms among Australian young people  
+```{r figure_2, fig.cap = "Anxiety symptoms increased more rapidly than depressive symptoms between 2012 and 2022, but the levels of depressive and anxiety symptoms have fallen since 2022"}
+source("figure_2.R")  
+
+fig_2
+```
+
+<br>
+
+The K6 consists of six items, each of which deals with either depressive or anxiety symptoms. Examining the trends in each item reveals which set of symptoms are responsible for the recent changes in psychological distress.  
+
+
+\newpage
+
+#### Figure 3 Annual trends in life satisfaction, self-rated mental health and feelings about the future  
+```{r figure_3, fig.cap="All wellbeing measures worsened between 2012 and 2022, however dissatisfaction with life and self-rated poor mental health improved after 2022 while negative feelings about the future continued to increase"}
+source("figure_3.R")
+
+fig_3
+```
+
+<br>
+
+Apart from the K6, the Mission Australia Youth Survey has a number of other mental health & wellbeing measures. Questions concerning life satisfaction, feelings about the future, and judgments of one’s own mental health. These represent different facets of wellbeing which can indicate trends in wellbeing beyond anxiety and depression symptoms.  
+
+\newpage  
+
+
+#### Figure 4. Sociodemographic differences in psychological distress  
+```{r figure_4, fig.dim=c(6.42, 6), fig.cap=""}
+source("figure_4.R")
+
+fig_4
+```
+
+<br>
+
+The National Action Plan describes health inequity as the disparity in health outcomes for children and young people across Australia, with particular populations at greater risk. These inequities often appear early and increase along a clear social gradient, widening the health gap between the most and least disadvantaged as the life course progresses.  
+
+> "Health inequity stems in large part from a series of social and other determinants, such as location, socio-economic status, housing, parental education, and access to resources. Many of these are co-related and children and young people are often exposed to multiple determinants which compound their inequity.”  
+
+The Mission Australia Youth Survey identifies many of the Action Plan’s priority populations including: 1) Aboriginal and Torres Strait Islander children and young people; 2) Children and young people from culturally and linguistically diverse backgrounds 3) Children and young people living with disability and chronic conditions.  
+
+Other populations with higher rates of poor mental health also include those who report: 4) Experiencing unfair treatment in the last year (Discriminated); 5) Gender diverse (Diverse); 6) Female gender.  
+
+Mental health inequity was found in all six priority populations. The prevalence of high distress was substantially greater among young people identifying as gender diverse (+36 percentage points over other young people in 2024), or disabled (+21 percentage points over others in 2024) or experiencing discrimination (+26.7 percentage points over others in 2024).  
+
+Thus while the prevalence of high distress has declined after 2022, we found no evidence that mental health inequity has improved for any group over the last decade, as there was little or no change in the gap in that period. This suggests the improvements in psychological distress trends do not demonstrate any change in the underlying causes of mental health inequity.  
+
 
 
 \newpage
