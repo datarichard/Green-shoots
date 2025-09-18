@@ -10,6 +10,7 @@ library(haven)
 library(labelled)
 library(flextable)
 library(gtsummary)
+require(ggrepel)
 source("R/helpers.R")
 
 # Import (not run) ####
@@ -40,6 +41,17 @@ theme_set(
 
 source("R/figure_1.R")
 print(fig_1)
+
+source("R/figure_2.R")
+print(fig_2)
+
+source("R/figure_3.R")
+print(fig_3)
+
+source("R/figure_4.R")
+print(fig_4)
+
+
 
 
 # Reversal of fortune ####
