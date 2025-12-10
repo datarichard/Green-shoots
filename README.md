@@ -1,4 +1,4 @@
-# Green shoots: Evidence of Improving Youth Mental Health Trends in Australia from 2022-2024  
+# Green shoots: Evidence of Improving Youth Mental Health Trends in Australia from 2022-2025  
 
 Download repository and run `green shoots.R` (run-file)  
 
