@@ -1,9 +1,11 @@
 ---
 title: "Green shoots - Has the decline in high school children mental health ceased?"
-author: "Richard W. Morris^a,b^, Naheen Brennan^c^, Tamara Freeburn^c^, Nick Glozier^a,b,\\*^"  
+author: "Nick Glozier^a,b,\\*^, Richard W. Morris^a,b^, Victor Rodrigues^c^, Naheen Brennan^d^, Tamara Freeburn^d^, "  
 output: word_document
 bibliography: references.bib
 csl: vancouver.csl
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=F}
@@ -42,7 +44,8 @@ theme_set(
 
 a.  ARC Centre of Excellence for Children and Families over the Life Course, Australia
 b.  Central Clinical School, Faculty of Medicine and Health, University of Sydney, NSW, Australia
-c.  Mission Australia Pty Ltd, Australia  
+c.  Faculdade de Ciências Médicas, Universidade do Estado do Rio de Janeiro, Brazil
+d.  Mission Australia Pty Ltd, Australia  
 
 \ 
 
@@ -70,15 +73,15 @@ c.  Mission Australia Pty Ltd, Australia
 
 # Abstract  
 
-**Background:**  
+**Background:** After more than a decade of escalating concern about youth mental health, emerging evidence suggests a potential turning point may have been reached. Recent US data has suggested improvements in adolescent and young adult wellbeing after 2022 but evidence about trends in other countries is lacking.  
 
-**Aims:**  
+**Aims:** To evaluate recent trends in the prevalence of psychological distress and mental in Australian high school students.  
 
-**Method:**  
+**Method:** We analyzed 13 waves of data from high school students in the Mission Australia Youth Survey from 2012 to 2024. Mental health was measured each wave using the Kessler 6 (K6) scale with a cut point of 19 indicating “psychological distress” and questions assessing. life satisfaction, feelings about the future, and judgments of one’s own mental health. We graphically described trends and performed survey weighted linear regressions to compare differences in the prevalence of psychological distress at inflection points and surveys pre and post COVID-19) adjusted for age and gender. We performed similar analyses for the other mental health variables, individual anxiety and depression symptoms level, and to compare trends in higher risk groups, such as indigenous populations.   
 
-**Results:**  
+**Results:** Our analysis included 263,588 participants, age range 15-19. The survey weighted prevalence of psychological distress was lowest in 2012 (17.8%, 95% CI [17.20%, 18.44%]) rising almost linearly to peak in 2022 (27.80%, 95% CI [27.15%, 28.46%]). The prevalence then fell to 19.40% (95% CI [18.81%, 20.00%]) in 2025, 6.82 percentage points (pp) lower than pre-COVID (2019) but still 1.59 pp higher than 2012. Similar patterns were seen in both anxious and depressive symptoms, life dissatisfaction and reporting poor mental health. Conversely the long term trend in young people’s pessimism about the future continued to rise in 2023 and 2024.  
 
-**Conclusions:**  
+**Conclusions:** This is the further evidence of a nascent amelioration in a number of metrics of the youth mental health “epidemic”, overall and in priority subpopulations. Whether this reflects a post-COVID rebound, the impact of a large increase in support, or other causes is unknown, and the ongoing rise in pessimism suggests the influence of macro trends on youth mental health remains.  
 
 
 
@@ -86,64 +89,82 @@ c.  Mission Australia Pty Ltd, Australia
 
 # Background  
 
-After more than a decade of escalating concern about youth mental health, emerging evidence suggests a potential turning point may have been reached [@economist2025]. Recent data from the United States indicate that the prolonged deterioration in adolescent and young adult psychological wellbeing that characterised the 2010s appears to be reversing, with measurable improvements observed from 2022 onwards [@ethier2025; @hms2025]. We present parallel findings from Australia, utilising twelve years of Mission Australia Youth Survey data (2012-2024) to examine trends in psychological distress among Australian young people.  
-
-The global youth mental health crisis of the past decade has been well-documented, with numerous studies demonstrating rising rates of depression, anxiety, and suicidal ideation among adolescents and young adults across developed nations. In the United States, CDC data show reductions in persistent feelings of sadness or hopelessness among high school students from 42% in 2021 to 40% in 2023, with the largest reductions in female students [@ethier2025]. More recently, the Healthy Minds Study documented that depression symptoms among university students peaked at 44% in 2022, before declining to 41% in 2023 and 38% in 2024 [@hms2025]. Similarly, the 2024-2025 Healthy Minds Study reported that severe depression symptoms have dropped to 18% (down from 23% in 2022), whilst suicidal ideation has fallen to 11% (down from 15% in 2022).  
+The global youth mental health crisis of the past decade has been well-documented, with numerous studies demonstrating rising rates of depression, anxiety, and suicidal ideation among adolescents and young adults across developed nations, culminating in a Lancet Commission [@mcgorry2024] and much policy (**ref**). COVID-19 has been blamed for much of this increase despite conflicting supporting evidence (**ref**) and observations that the rise predated it by a decade [@botha2023]. However emerging evidence suggests a potential turning point may have been reached [@economist2025; @li2025]. In the United States, CDC data show reductions in persistent feelings of sadness or hopelessness among high school students from 42% in 2021 to 40% in 2023, with the largest reductions in female students [@ethier2025]. More recently, the Healthy Minds Study documented that depression symptoms among university students peaked at 44% in 2022, before declining to 41% in 2023 and 38% in 2024 [@hms2025]. Similarly, the 2024-2025 Healthy Minds Study reported that severe depression symptoms have dropped to 18% from 23% in 2022, whilst suicidal ideation has fallen to 11% from 15% in 2022.  
 
 In the Australian context, the trajectory of youth mental health has been a source of significant policy concern. The Productivity Commission's landmark 2020 Mental Health Inquiry highlighted the substantial economic and social costs of poor mental health, particularly among young people [@kavanagh2020]. However, monitoring progress has proven challenging. The Commission's 2025 interim Review of the National Mental Health and Suicide Prevention Agreement identified a critical data gap, noting that "there is no data available to describe trends in the mental health and suicide prevention system over the term of the Agreement. Most of the data was last collected in 2022" [@pc2025].  
 
-This data deficit is particularly problematic given the substantial investments in youth mental health services over recent years, including the expansion of headspace centres, implementation of school-based mental health programmes, and increased funding for early intervention services. Without reliable trend data, it has been impossible to assess whether these interventions are achieving their intended outcomes or whether the trajectory of youth mental health in Australia mirrors patterns observed internationally.  
+This data deficit is particularly problematic given the substantial investments in youth mental health services over recent years, including the expansion of headspace centres, implementation of school-based mental health programmes, and increased funding for early intervention services [@rickwood2019; @mcgorry2013]. Without reliable trend data, it has been impossible to assess whether these interventions are achieving their intended outcomes or whether the trajectory of youth mental health in Australia mirrors patterns observed in the US. This analysis is particularly timely given ongoing debates about resource allocation, service models, and the balance between universal prevention and targeted intervention strategies [@mcgorry2024]. 
 
-The Mission Australia Youth Survey represents one of the few consistent, annual data sources on youth wellbeing in Australia. Since 2012, the survey has included the Kessler Psychological Distress Scale (K6), a validated instrument for measuring psychological distress in population surveys. This provides a unique opportunity to examine trends in youth mental health over a twelve-year period, spanning both the documented deterioration of the 2010s and the potential recovery period from 2022 onwards.  
-
-Understanding whether Australia is experiencing a similar reversal in youth mental health trends to that observed in the United States has important implications for policy and practice. If confirmed, such findings would suggest that the factors driving improvement may transcend national boundaries and could inform targeted interventions. Conversely, divergent patterns would highlight the importance of country-specific factors and the need for tailored approaches.  
-
-Furthermore, documenting these trends addresses the data gap identified by the Productivity Commission and provides essential evidence for evaluating the effectiveness of Australia's substantial investments in youth mental health services. This analysis is particularly timely given ongoing debates about resource allocation, service models, and the balance between universal prevention and targeted intervention strategies.  
+Given this need, we aimed to evaluate recent trends in the prevalence of psychological distress and other metrics of mental health in young Australians over the past thirteen/fourteen years.  
 
 \newpage
 
 # Method  
 
-<br>
+The Mission Australia _Youth Survey_ represents one of the few consistent, annual data sources on wellbeing in Australia in young people aged 15-19. The Youth Survey sampling frame is young people enrolled at school or in contact with Mission Australia services. Respondents are enrolled by invitations to participate distributed via their school, as well as through community organisations, local government services, Mission Australia services and the Mission Australia website. Although not formally nationally representative of all youth, and with over-representation of some states and no data on response rates, the recruited sample is very large (over 15000 almost every year) and has repeatedly been demonstrated to match youth population demographics of gender, sexuality, country of birth, indigenous status, and language spoken at home. In 2024, Mission Australia conducted its 23rd annual survey, receiving 17,480 responses from young people aged 15 to 19 years, from which we provide the complete sample demographics and conduct the planned analysis. 
 
-##### Mission Australia Youth Survey sampling and procedures  
-
-The _Youth Survey_ is a convenience sample of all young Australians aged 15 to 19. The sampling frame was young people enrolled at school or in contact with Mission Australia services. Respondents were enrolled by invitation to their school, as well as in contact with community organisations, local government services, Mission Australia services and the Mission Australia website.  
+We also received preliminary results from the 2025 Mission Australia Youth Survey (*n* = 17,155), which allowed us to provide prevalence estimates for 2025 and conduct a trend analysis over the 14 years from 2012 to 2025, albeit without demographic or other mental health variables for the final year.  
 
 <br>
 
-#####	K6 scale details and scoring  
+##### Demographics  
 
-Since 2012, the Mission Australia Youth Survey has included a measure of psychological distress: the Kessler 6 (K6). It consists of a brief, six-item scale that asks respondents how frequently in the past four weeks they have felt the following symptoms: 1) nervous; 2) hopeless; 3) restless or fidgety; 4) so depressed that nothing could cheer them up; 5) that everything was an effort; and 6) worthless. Total scores range from 6 to 30.  
-
-Based on the established [Australian scoring criteria published by the Australian Bureua of Statistics (ABS)](https://www.abs.gov.au/ausstats/abs@.nsf/lookup/34333D54F054CE51CA2579D50015D786), we distinguished the number of young people with **psychological distress** as a validated indicator of the prevalence of likely mental illness in the population [@kessler2003; @kessler2010; @furukawa2003]. Consistent with the ABS, a total K6 score > 18 indicated psychological distress.  
+Respondents self-report demographic variables of gender (male, female, other/gender diverse, prefer not to say), age (15 to 19), state/territory (NSW, VIC, QLD, SA, WA, TAS, NT, and ACT), born outside of Australia, language spoken at home other than English, Indigenous (ATSI), identity as a person with disability. Demographic responses were available from 2012 to 2024 and these were used to identify high-risk sub-populations.  
 
 <br>
 
+#####	Psychological Distress  
 
-#####	Sample sizes and demographics across years  
+The Kessler 6 (K6) is a six-item scale that asks respondents how frequently in the past four weeks they have felt the following symptoms: 1) nervous; 2) hopeless; 3) restless or fidgety; 4) so depressed that nothing could cheer them up; 5) that everything was an effort; and 6) worthless, with five-point response scales (1-none of the time to 5-all the time). Total scores range from 6 to 30. Based on the established Australian scoring criteria published by the Australian Bureau of Statistics ([ABS](https://www.abs.gov.au/ausstats/abs@.nsf/lookup/34333D54F054CE51CA2579D50015D786)), we considered a total K6 score > 18 as indicative of high psychological distress for prevalence estimates, and used the mean score for each symptom each year to evaluate trends in symptoms. Total scores were available from 2012 to 2025, however individual symptom levels were only available until 2024.   
 
-The _Mission Australia Youth Survey_ is the largest annual survey of young people of its kind in Australia. In 2024, Mission Australia conducted its 23rd annual survey, receiving 17,480 responses from young people aged 15 to 19 years. The number of responses ($N$) received each year included in the present report were substantial, resulting in high levels of precision when estimating prevalence. For example, a 95 percent binomial confidence interval has less than 1 percentage point margin of error at the smallest annual survey sample (i.e., 0.84 of a percentage point when $N = 13,600$ in 2014). Thus confidence interval estimates were not displayed in the figures in this report.  
+<br>
+
+##### Other mental health variables  
+
+Each year the survey asks a number of other mental health & wellbeing measures, and individual responses were available from 2012 to 2024. Life satisfaction was measured by a question asking how happy are you with your life as a whole with responses from 0 - "Very sad" to 10 - "Very happy". We defined "Dissatisfied with life" as any score < 5.    
+
+Future Feelings: Young people were asked to select how they would describe their feelings when thinking about the future on a 5-point scale that ranged from 1 - "Very negative" to 5 - "Very positive". The two negatiove categories were combined to form “Negative feelings about the future”.  
+
+Self-rated mental health was obtained from a single item asking young people to rate their own mental health on a scale from 1 - "Poor" to 5 - "Excellent". We tallied the number of "Poor" responses.   
+
 
 
 <br>
 
-
-#####	Statistical approach to trend analysis  
-
-(to be added here)  
-
-<br>
 
 #####	Adjustments for demographic changes over time  
 
-Sampling weights inversely proportional to the selection probabilities of sample units in the Australian census population were calculated and provided by Mission Australia. The target population was all Australian young people aged 15 to 19 in each year. Inverse probabilitiy of sampling weighting (IPSW) was conducted for   gender, state and SEIFA index in each year. The weights were then included in the annual estimates reported here to adjust for sampling differences in each year.  
+Mission Australia provided the sampling weights after conducting inverse probability of sampling weighting (IPSW) in the Australian census population. The target population was all Australian young people aged 15 to 19 in each year, and the selection probabilities of the sample units for each gender, state and SEIFA index were calculated. We incorporated the weights when tallying the sample proportions to produce weighted estimates of prevalence in the Australian population, adjusted for sampling differences in gender, state and SEIFA each year.  
+
+<br>
+
+#####	Bayesian changepoint analysis  
+
+We fit a Bayesian changepoint model using the _mcp_ package in R (Lindeløv, 2020) to examine whether the temporal trend in high psychological distress prevalence changed over the study period. The outcome was the proportion of respondents reporting high psychological distress (K6 score > 18), modeled as a binomial response with the number of trials equal to the survey sample size for each year.  
+ 
+The model consisted of two linear segments:
+ 
+1) An intercept and slope for *Year*.
+2) A slope for *Year* without an intercept, allowing the level and trend to shift at the changepoint. 
+ 
+We specified a uniform prior for the changepoint, bounded between 2018 and 2024. The prior reflected the expectation that any shift in trend would have occurred shortly before, during, or after the COVID-era, while allowing substantial uncertainty within that window so that the data primarily determine the posterior estimate. 
+ 
+To evaluate whether the changepoint model provided a better fit than a null model without a changepoint, we compared the two models using approximate leave-one-out (LOO) cross-validation (Vehtari et al., 2017). The null model included a single linear trend for _Year_ without a changepoint. Both models were fit using a binomial likelihood and we compared models using the expected log predictive density (ELPD) for each model and calculated the difference to determine model evidence. For interpretability we report the standardized difference $z = \Delta ELPD / SE$ and an associated two-sided normal-approximation *p*-value (this p-value indexes the probability, under the normal approximation of the sampling distribution of the ELPD, of observing a difference at least as extreme if the two models had equal predictive performance).        
 
 <br>
 
 \newpage
 
 # Results  
+
+<br>
+
+
+## Demographics  
+
+Table 1 compares three years of survey results to reveal whether the profile of young people changed from pre-COVID to the post-COVID era, however our complete analysis included 263,588 participants from 2012 to 2024. Most demographic variable prevalences were relatively stable with variation +/-2% around the overall mean. Male gender was reported by 49-51% each year and female gender by 46-49%. The proportion identifying as other/diverse rose from 0% to 4.4% in 2022. The outlier exceptions were age in 2021 (reflecting COVID restrictions) and the proportion not studying or working in 2024. The proportion identifying as having a disability showed an increasing trend over time.  
+
+<br>
 
 #### Table 1. Demographic characteristics^1^ before, during and after COVID era
 ```{r table_1, eval=T}
@@ -152,14 +173,53 @@ source("table_1.R")
 table_1
 ```
 
+
+
+\newpage
+
+## Trends in psychological distress  
+
+```{r distress}
+ys <- read_rds("data/ys_preprocessed.rds")
+
+k6_p <- select(ys, 
+    Year, K6_class, weight_final_1) |> 
+  mutate(High = K6_class == 3) |> 
+  filter(!is.na(High)) |> 
+  group_by(Year) |> 
+  count(High, wt = weight_final_1) |> 
+  mutate(N = sum(n)) |> 
+  filter(High) |> 
+  ungroup() |> 
+  select(-High) |> 
+  add_row(Year = 2025, n = round(0.194*17155), N = 17155) |> 
+  rowwise() |> 
+  transmute(Year, p = prop_ci(.x = n, .n = N, rowwise=T)) |> 
+  unnest(p) |> 
+  as.data.frame() |> 
+  column_to_rownames("Year") |> 
+  as.matrix()
+
+print_ci <- function(mt, year) {
+  mt <- mt*100
+  mt <- roundf(mt, 2)
+  paste0(
+    str_trim(mt[year, 'y']), 
+    "%, (95% CI [", 
+    str_trim(mt[year, 'ymin']), 
+    "%, ", 
+    str_trim(mt[year, 'ymax']), 
+    "%])"
+  )
+}
+```
+
+The age and gender adjusted prevalence of high psychological distress was `r print_ci(k6_p, "2012")` in 2012, rising continuously to `r print_ci(k6_p, "2022")` in 2022 (an increase of +10 percentage points). Subsequently prevalence has declined each year since then to `r print_ci(k6_p, "2025")` in 2025, a decrease of -8.4 percentage points (the prevalence in 2025 was still +1.59 [+0.72, +2.45] percentage points higher than 2012).  
+
 <br>
 
-We selected three years of survey results to compare the how the profile of young people have changed from pre-COVID to the post-COVID era. Table 1 shows the sample was majority female before, during and after the COVID era, with most respondents 15 or 16 years old. Likewise, most respondents came from the three largest states: NSW, QLD and VIC, however the relative size of the WA sample declined during and after COVID. The vast majority of respondents were at school (> 90%), however there was a small but increasing proportion of respondents not in education, employment or training (NEET).  
-
-<br>
-
-#### Figure 1. Annual trends in psychological distress from 2012 to 2024  
-```{r figure_1, fig.cap = "The prevalence of psychological distress increased in Australia from 2012 to 2022. This trend peaked in 2022 and has declined for two consecutive years."}
+#### Figure 1. Annual trends in psychological distress from 2012 to 2025  
+```{r figure_1, fig.cap = "The prevalence of psychological distress increased in Australia from 2012 to 2022. This trend peaked in 2022 and has declined for three consecutive years."}
 source("figure_1.R")
 
 fig_1
@@ -167,99 +227,120 @@ fig_1
 
 <br>
 
-Australia, along with other parts of the developed world, experienced what some have called an epidemic of mental ill-health among young people for over a decade between 2012 and 2022 [@blanchflower2025; @twenge2025]. However the peak in psychological distress among young Australians in 2022 and subsequent decline in the post-COVID era is also consistent with emerging data from high schools and college campuses in the US [@ethier2025; @hms2025].  
+A changepoint model demonstrated superior predictive performance compared to the (linear) null model (LOOIC = 207.6 for the changepoint model vs. 1,295.2 for the null model), with an ELPD difference of 543.8 (SE = 212.2). The z-ratio ($\Delta ELPD/SE$) = 2.56 ($p = .01$), which corresponds to a greater than 95% probability the change point model has superior predictive accuracy and provides evidence of a structural shift in the trend during this time period (2018-2024). The posterior estimate was precise, indicating that the changepoint occurred in the year 2022 (95% credible interval: 2021 to 2023), consistent with a shift in psychological distress prevalence during the COVID-19 pandemic. The narrow credible interval and convergence diagnostics (R̂ = 1.00, n_eff = 2,594) indicate high certainty in the timing estimate and good model convergence.  
 
 
 \newpage
 
-#### Figure 2 Trend in severity of symptoms among Australian young people  
+## Anxiety and depressive symptoms  
+
+The mean severity of each symptom showed a similar pattern rising from 2012 to 2019 (mean anxiety symptoms +0.31, mean depressive symptoms +0.17). The depressive symptoms then plateaued whilst anxiety continued to rise, peaking in 2022 (mean anxiety +0.06 since 2019 vs -0.02 for mean depressive symptoms), before all symptom severity means declined.  
+
+<br>
+
+#### Figure 2 Annual trends in severity of symptoms from 2012 to 2024
 ```{r figure_2, fig.cap = "Anxiety symptoms increased more rapidly than depressive symptoms between 2012 and 2022, but the levels of depressive and anxiety symptoms have fallen since 2022"}
 source("figure_2.R")  
 
 fig_2
 ```
 
-<br>
+A linear trend analysis of anxiety and depressive symptoms between 2012 and 2019, including the interaction between symptom type (sad, restless, effort, etc) and time (year), confirmed the trend in each symptom type was positive, however each depressive symptom trend was lower than each anxiety symptom trend (all pairwise trend comparison *ps*s < .001, Bonferroni corrected). There were no significant differences in trend between the depressive symptoms (smallest *p* = 0.74).  
 
-The K6 consists of six items, each of which deals with either depressive or anxiety symptoms. Examining the trends in each item reveals which set of symptoms are responsible for the recent changes in psychological distress.  
-
+A similar analysis of symptoms between 2019 and 2022 confirmed each anxiety trend was significant and positive (all trend *p*s < .001). The trends in depressive symptoms were either negative (sad trend = -0.02 [-0.03, -0.01], *p* < .001) or non-significant (smallest *p* = .11).  
 
 \newpage
 
-#### Figure 3 Annual trends in life satisfaction, self-rated mental health and feelings about the future  
+## Trends in other measures of mental health  
+
+```{r wellbeing}
+ys <- read_rds("data/ys_preprocessed.rds")
+
+# Mental health covariate trends
+mhi_cols <- c(
+  Q19PWIY_whole = 'dissatisfied',
+  Q20MHSelfPerceived = 'poor mental health',
+  Q23TheFuture = 'negative feelings'
+)
+
+wellbeing <- ys |> 
+  select(UniqueID, Year, weight_final_1, all_of(names(mhi_cols))) |> 
+  haven::zap_labels() |> 
+  mutate(
+    Q19PWIY_whole = as.numeric(Q19PWIY_whole < 5),
+    Q20MHSelfPerceived = as.numeric(Q20MHSelfPerceived == 1),
+    Q23TheFuture = as.numeric(Q23TheFuture < 3)
+  ) |> 
+  gather(key, val, 4:6) |> 
+  mutate(
+    key = recode_factor(key, !!!mhi_cols)) |> 
+  filter(!is.na(val)) |> 
+  group_by(Year, key) |> 
+  count(val, wt = weight_final_1) |> 
+  mutate(N = sum(n)) |> 
+  filter(val == 1) |> 
+  rowwise() |> 
+  transmute(Year, key, p = prop_ci(.x = n, .n = N, rowwise=T)) |> 
+  unnest(p) |> 
+  ungroup()
+
+wellbeing |> 
+  filter(str_detect(key, "dissatisfied")) |> 
+  select(-key) |> 
+  as.data.frame() |> 
+  column_to_rownames("Year") |> 
+  as.matrix() -> dissatisfied
+
+wellbeing |> 
+  filter(str_detect(key, "poor")) |> 
+  select(-key) |> 
+  as.data.frame() |> 
+  column_to_rownames("Year") |> 
+  as.matrix() -> poor
+
+wellbeing |> 
+  filter(str_detect(key, "negative")) |> 
+  select(-key) |> 
+  as.data.frame() |> 
+  column_to_rownames("Year") |> 
+  as.matrix() -> negative
+```
+
+The proportion of young people reporting dissatisfaction with life and “poor” mental ill-health rose from `r print_ci(dissatisfied, "2012")` and `r print_ci(poor, "2012")` in 2012, then peaking at `r print_ci(dissatisfied, "2021")` in 2021 and `r print_ci(poor, "2022")` in 2022, respectively, before improving in 2024 to `r print_ci(dissatisfied, "2024")` and `r print_ci(poor, "2023")`. The proportion reporting negative feelings about the future also rose from 2012 to 2022 but then showed a further increase of +1.33 percentage points (95% CI [+0.52, +2.14]) from 2022 to 2024. All three metrics were worse in 2024 than 2012.  
+
+<br>
+
+
+#### Figure 3 Annual trends in life satisfaction, self-rated mental health and feelings about the future (2012-2024)  
 ```{r figure_3, fig.cap="All wellbeing measures worsened between 2012 and 2022, however dissatisfaction with life and self-rated poor mental health improved after 2022 while negative feelings about the future continued to increase"}
 source("figure_3.R")
 
 fig_3
 ```
 
-<br>
-
-Apart from the K6, the Mission Australia Youth Survey has a number of other mental health & wellbeing measures. Questions concerning life satisfaction, feelings about the future, and judgments of one’s own mental health. These represent different facets of wellbeing which can indicate trends in wellbeing beyond anxiety and depression symptoms.  
-
-\newpage  
-
-
-#### Figure 4. Sociodemographic differences in psychological distress  
-```{r figure_4, fig.dim=c(6.42, 6), fig.cap=""}
-source("figure_4.R")
-
-fig_4
-```
-
-<br>
-
-The National Action Plan describes health inequity as the disparity in health outcomes for children and young people across Australia, with particular populations at greater risk. These inequities often appear early and increase along a clear social gradient, widening the health gap between the most and least disadvantaged as the life course progresses.  
-
-> "Health inequity stems in large part from a series of social and other determinants, such as location, socio-economic status, housing, parental education, and access to resources. Many of these are co-related and children and young people are often exposed to multiple determinants which compound their inequity.”  
-
-The Mission Australia Youth Survey identifies many of the Action Plan’s priority populations including: 1) Aboriginal and Torres Strait Islander children and young people; 2) Children and young people from culturally and linguistically diverse backgrounds 3) Children and young people living with disability and chronic conditions.  
-
-Other populations with higher rates of poor mental health also include those who report: 4) Experiencing unfair treatment in the last year (Discriminated); 5) Gender diverse (Diverse); 6) Female gender.  
-
-Mental health inequity was found in all six priority populations. The prevalence of high distress was substantially greater among young people identifying as gender diverse (+36 percentage points over other young people in 2024), or disabled (+21 percentage points over others in 2024) or experiencing discrimination (+26.7 percentage points over others in 2024).  
-
-Thus while the prevalence of high distress has declined after 2022, we found no evidence that mental health inequity has improved for any group over the last decade, as there was little or no change in the gap in that period. This suggests the improvements in psychological distress trends do not demonstrate any change in the underlying causes of mental health inequity.  
-
-
 
 \newpage
 
 # Discussion  
 
-The findings presented here provide the first comprehensive evidence of youth mental health trends in Australia spanning the critical period from 2012 to 2024. Our results demonstrating improvement from 2022 onwards align with emerging patterns observed in the United States, suggesting parallel discussion points based on actual findings.  
+Australia, along with many other countries, especially in High Income Countries (HICs), experienced what some have called an epidemic of mental ill-health among young people for over a decade between 2012 and 2022 [@twenge2025]. However the peak in psychological distress among young Australians in 2022 and subsequent decline in the post-COVID era is also consistent with emerging data from high schools and college campuses in the US [@hms2025], Hong Kong [@li2025]. The prevalence is still higher than a decade ago but lower than just prior to COVID-19, and this recent improvement has been seen in key high risk sub-populations.  
 
-Several potential explanations warrant consideration for the observed reversal in youth mental health trends. First, the natural resolution of pandemic-related stressors may have contributed to improvements as young people adapted to post-COVID realities and social connections were re-established. Second, increased mental health literacy and reduced stigma may have facilitated earlier help-seeking and more effective self-management strategies. The proliferation of digital mental health resources and apps, whilst controversial, may have provided accessible support for mild to moderate symptoms.  
+Several potential explanations warrant consideration for the observed reversal in youth mental health trends. First, the natural resolution of pandemic-related stressors may have contributed to improvements as young people adapted to post-COVID realities and social connections were re-established [@bell2023]. Second, increased mental health literacy and reduced stigma may have facilitated earlier help-seeking and more effective self-management strategies [@winkler2024]. Many countries increased a range of support policies for young people during and after COVID which may be producing effects. The expansion of youth mental health services through headspace and other initiatives may have reached a critical mass, enabling earlier intervention and preventing escalation of symptoms [@rickwood2019]. School-based programmes focusing on resilience and emotional regulation may be yielding dividends as these cohorts age [@pedrini2022]. However, it is equally possible that improvements reflect broader societal changes, including, increased acceptance of diverse identities, and growing emphasis on wellbeing in educational settings [@world2021].The proliferation of digital mental health resources and apps, whilst controversial, may have provided accessible support for mild to moderate symptoms [@torous2025].  
 
-From a developmental perspective, the cohort effects cannot be ignored. Young people who experienced the peak of social media expansion during early adolescence may have developed greater digital resilience and more sophisticated strategies for managing online environments. Additionally, growing awareness of the relationship between social media use and wellbeing may have prompted behavioural changes at both individual and family levels.  
+From a developmental perspective, the cohort effects cannot be ignored. Young people who experienced the peak of social media expansion during early adolescence may have developed greater digital resilience and more sophisticated strategies for managing online environments [@zhou2021]. Additionally, growing awareness of the relationship between social media use and wellbeing may have prompted behavioural changes at both individual and family levels [@galea2024].  
 
-The Australian context offers unique insights into these trends. The expansion of youth mental health services through headspace and other initiatives may have reached a critical mass, enabling earlier intervention and preventing escalation of symptoms. School-based programmes focusing on resilience, emotional regulation, and help-seeking may be yielding dividends as these cohorts age. However, it is equally possible that improvements reflect broader societal changes, including evolving attitudes toward work-life balance, increased acceptance of diverse identities, and growing emphasis on wellbeing in educational settings.  
+The pre-COVID rise in distress and mental ill-health has in part been attributed to macrotrends such as climate change, wealth inequity and/or social media [@mcgorry2024]. The decline in distress and dissatisfaction has occurred despite none of these gong away. Further since 2021-2022 global conflict has increased, a “cost of living” crisis emerged in many HICs, and observers describe an increasingly polarized and angry society. Our findings and those elsewhere suggest macrotrend casual explanations are either less powerful than proposed or that interventions, support and other factors can ameliorate them.  
 
-<br>
+A further explanation might be using “distress” as a metric rather than looking at the type of mental health that macrotrends might prefentially affect The current generation of young people have been described an “anxious generation” and living in an anxiogenic environment [@haidt2024]. This is reflected in our observed differential trends in anxiety and depression symptoms over time. Anxiety syptoms rose more than depressive symptoms from 2012 to 2022 (e.g change in mean anxiety +0.31 vs +0.17 for depression) and, despite falling, still remained much higher than in 2012 (+0.26 mean change in anxiety symptoms), whereas the mean scores of the symptoms more indicative of depression have fall back to near 2012 levels (-0.04 change in mean depression since 2012). Further support for this comes from the worrying ongoing rise in young people’s pessimism about the future.  
 
-### Limitations  
+The social determinants of health, and mental ill-health in particular have been gaining policy and funding focus for several years attempting to reduce health “gaps” and inequity (**Kirkbride ref**). Positively we observed post COVID declines in distress across all high risk group. However we found no evidence that mental health inequity has improved for any group over the last decade. Using such gross population metrics cannot disentangle this as we cannot evaluate differential trends in drivers of ill-health and/or support and treatment, or their associations at individual level -the epidemiological fallacy. It may be that there has been no change in either the differential exposure to risk factors and treatment. It may be that policies aimed at inequity have improved support and access, but these have lower effectiveness, or there has been a concomitant increase in the number and severity of determinants of distress. Future research should investigate the mechanisms underlying these improvements, with particular attention to identifying protective factors that can be enhanced through policy and practice. Longitudinal studies following individual trajectories would complement these population-level findings. Additionally, examining disparities in mental health trends across different subgroups—including Indigenous youth, rural and remote populations, and LGBTQIA+ young people—remains critical for ensuring equitable outcomes. Linkage to routine health, educational and social data will be required to properly inform policy.  
 
-Several limitations should be acknowledged. The Mission Australia Youth Survey, whilst valuable for its consistency and scale, relies on self-report measures and may not capture the full spectrum of mental health presentations. Selection bias may influence results if survey participation patterns have changed over time. Additionally, the K6, whilst validated, provides a measure of general psychological distress rather than specific diagnostic categories. Caution is warranted in extrapolating these findings to clinical populations or assuming they reflect changes in severe mental illness rates.  
-
-<br>
-
-### Implications and Future Directions  
-
-These findings have substantial implications for mental health policy and service delivery in Australia. If the improving trend is sustained, it suggests that current approaches may be gaining traction, though continued vigilance is essential given the dynamic nature of youth mental health. The alignment with international trends points to the value of cross-national collaboration and knowledge exchange in addressing youth mental health challenges.  
-
-Future research should investigate the mechanisms underlying these improvements, with particular attention to identifying protective factors that can be enhanced through policy and practice. Longitudinal studies following individual trajectories would complement these population-level findings. Additionally, examining disparities in mental health trends across different subgroups—including Indigenous youth, rural and remote populations, and LGBTQIA+ young people—remains critical for ensuring equitable outcomes.  
-
-The data gap identified by the Productivity Commission underscores the need for sustained investment in mental health surveillance systems. Regular, comprehensive monitoring using consistent measures is essential for tracking progress, identifying emerging concerns, and evaluating intervention effectiveness. The establishment of a national youth mental health observatory, as recommended in various policy documents, would provide the infrastructure necessary for evidence-informed decision-making.  
-
-<br>
+Several limitations should be acknowledged. The Mission Australia Youth Survey, whilst valuable for its consistency and scale, relies on self-report. Information bias may influence evaluations of trends if survey response patterns have changed over time, and there is some evidence of changes in language, concepts and self identification over time (**Haslam ref?**). Additionally, the K6, whilst validated, provides a measure of general psychological distress rather than a mental ill health diagnosis, with some suggesting an “inflation” in self -reported symptoms over time (**Foulkes 2023 ref**). Caution is warranted in extrapolating these findings to clinical populations or assuming they reflect changes in severe mental illness rates. Further there is no defined sample frame or response rate to estimate selection bias. The data are population weighted which aids generalizability but this is still not perfect. Conversely there is little evidence of major differences in the sample’s demography over time beyond those expected from social changes e.g. an increase in gender diversity. As such the within-study analysis of trends is less affected by potential sampling bias if this is consistent.
 
 ### Conclusions  
 
-This analysis provides timely evidence of youth mental health trends in Australia during a period of significant change. The documented improvement from 2022 onwards offers cautious optimism whilst highlighting the importance of sustained attention to youth mental health. These findings address a critical evidence gap identified by the Productivity Commission and provide a foundation for informed policy development.  
+This analysis provides timely evidence of youth mental health trends in Australia during a period of significant change. The documented improvement from 2022 onwards offers cautious optimism. These findings have substantial implications for mental health policy and service, and the discourse around youth mental health. If the post COVID “recovery” reported is sustained and confirmed in other datasets, it suggests that current approaches may be gaining traction, in the face of ongoing societal stressors. The alignment with emerging international data points to the value of cross-national collaboration and knowledge exchange in addressing youth mental health challenges. The challenge now is to consolidate gains, address persistent disparities, and build resilient systems capable of responding to future challenges.
 
-The apparent reversal of the decade-long deterioration in youth mental health, if sustained, represents a significant public health achievement. However, rates of psychological distress remain substantially elevated compared to historical baselines, indicating that considerable work remains. The challenge now is to consolidate gains, address persistent disparities, and build resilient systems capable of responding to future challenges.  
-
-As Australia continues to navigate the complex landscape of youth mental health, these data provide both reassurance and direction. They suggest that positive change is possible whilst reminding us that progress requires sustained commitment, evidence-informed approaches, and continued innovation in how we support the wellbeing of young people.  
 
 \newpage
 

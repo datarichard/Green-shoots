@@ -4,7 +4,7 @@ library(flextable)
 library(gtsummary)
 
 demographics <- read_rds("data/ys_preprocessed.rds") |> 
-  select(UniqueID, Year, Q1Gender_Final, Q3Age_Final, Q2State,  
+  select(UniqueID, Year, Q1Gender_Final, Q3Age_Final, #Q2State,  
          OLDCountryofBirth, Q43LOTE, Q41ATSI_Final, Q45DisabilityYS, 
          Q11PaidWork, Q5Studying, Q37AwayFromHome)
 
@@ -13,9 +13,10 @@ demographics |>
   as_factor() |> 
   rename(Age = Q3Age_Final) |> 
   mutate(#Age = if_else(Age == 19, 18, Age),
-    NEET = str_detect(Q5Studying, "Yes", negate = T) &
-      str_detect(Q11PaidWork, "Yes", negate = T),
-    Studying = str_detect(Q5Studying, "Yes")) |> 
+    Studying = str_detect(Q5Studying, "Yes"),
+    `Not studying or working` = str_detect(Q5Studying, "Yes", negate = T) &
+      str_detect(Q11PaidWork, "Yes", negate = T)
+    ) |> 
   select(-UniqueID, -Q5Studying, -Q11PaidWork) -> df
 
 var_labels <- labelled::get_variable_labels(df, null_action = "fill") |> 

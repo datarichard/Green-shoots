@@ -9,12 +9,15 @@ k6_percents <- select(ys,
   percent(Year, High, wt = weight_final_1) |> 
   mutate(N = sum(n)) |> 
   filter(High) |> 
-  ungroup()
+  ungroup() |> 
+  select(-High) |> 
+  add_row(
+    Year = 2025, n = round(0.194*17155), N = 17155, proportion = 0.194
+  )
 
 highlights <- k6_percents |> 
-  mutate(m = proportion == max(proportion[Year > 2019])) |> 
   filter(
-    Year == first(Year) |m| Year == last(Year))
+    Year %in% c(2012, 2022, 2025))
 
 
 fig_1 <- ggplot(k6_percents, 
@@ -26,7 +29,9 @@ fig_1 <- ggplot(k6_percents,
   geom_line(color = "grey50") +
   geom_point(data = highlights, size = 2, stroke = 1, 
              color = "grey50") +
-  annotate(geom = "text", x = 2021.5, y = .29, label = "2022", 
+  annotate(geom = "text", x = 2022.9, y = .294, label = "2022", 
+           color = "grey70", fontface = "bold") +
+  annotate(geom = "text", x = 2025.9, y = .21, label = "2025", 
            color = "grey70", fontface = "bold") +
   geom_text(data = highlights, 
             aes(label = paste0(round(proportion*100, 1), "%")),

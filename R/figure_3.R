@@ -26,6 +26,7 @@ wellbeing <- ys |>
   percent(Year, key, val, wt = weight_final_1) |> 
   mutate(N = sum(n)) |> 
   filter(val == 1) |> 
+  select(Year, key, n, N, proportion) |> 
   ungroup()
 
 
@@ -56,8 +57,8 @@ fig_3 <- select(wellbeing, Year, key, proportion) |>
   facet_wrap(~key) +
   labs(
     subtitle = "Percent of Australians aged 15-19",
-    title = "Percentage of young people with negative feelings about the
-future are higher than ever",
+#     title = "Percentage of young people with negative feelings about the
+# future are higher than ever",
     x = "", y = "") +
   # hrbrthemes::theme_ipsum(grid = "Y",
   #      plot_margin = margin(t = 5, r = 0, b = 0, l = 0)) +

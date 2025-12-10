@@ -73,10 +73,10 @@ fig_4 <- ggplot(vulnerabl.p, aes(x = Year, y = p)) +
   scale_x_continuous(breaks = c(2012, 2016, 2020, 2024)) +
   facet_wrap(~key_label) +
   labs(
-    title = "Young people in vulnerable groups have higher psychological
-distress, and the gap has not improved over time",
+#     title = "Young people in vulnerable groups have higher psychological
+# distress, and the gap has not improved over time",
     x = "", y = "",
-    subtitle = "Prevalance (%) of psychological distress in vulnerable Australians aged 15-19") +
+    subtitle = "Prevalance (%) of psychological distress in Australians aged 15-19") +
   theme(
     legend.position = "none",
     strip.text = element_text(hjust = 1, vjust = 1))

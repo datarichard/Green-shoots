@@ -33,8 +33,8 @@ fig_2 <- ggplot(k6_symptoms,
     x = "", 
     y = "",
     subtitle = "Average symptom severity (from 1 'absent' to 5 'all the time') in Australians aged 15-19",
-    title = "Psychological distress has been primarily driven by anxiety
-symptoms in young people",
+#     title = "Psychological distress has been primarily driven by anxiety
+# symptoms in young people",
   ) +
   hrbrthemes::theme_ipsum(grid = "Y",
                           plot_margin = margin(t = 10, r = 30, b = 0, l = 0)) +
